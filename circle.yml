@@ -3,7 +3,7 @@ machine:
     America/New_York
 
   java:
-    version: openjdk8
+    version: oraclejdk8
 
 dependencies:
   pre:

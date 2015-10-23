@@ -32,8 +32,8 @@ SDK/JRE provided by CircleCI by default.  That's it!  There's nothing to it!
   This should not be anything new.  I really don't care what build library you are
   using nor do I care if you are using Java, Scala or any of the other JVM languages.
   The key here is that you set up your project normally, as if nothing else needed
-  to be done.  You don't need to ad **any** extra information or configuration to the
-  core.
+  to be done.  You don't need to add **any** extra information or configuration to
+  the core.
   
 #### 2. Create the Overlay
 
@@ -52,6 +52,9 @@ SDK/JRE provided by CircleCI by default.  That's it!  There's nothing to it!
   
   You can grab the files your need (for Java 8) from here:
   
+  - [Legion of the Bouncy Castle](https://www.bouncycastle.org/latest_releases.html)
+  - [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
+  
   We can now tell CircleCI how to make use of our overlay.
 
 #### 3. Rsync the Overlay
@@ -63,7 +66,7 @@ SDK/JRE provided by CircleCI by default.  That's it!  There's nothing to it!
   command to do what we need.  So here's what we need:
   
   1. Create a `circle.yml` file in your project root
-  2. Specify your Java version with 
+  2. Specify your Java version with [one of the predefined constants](https://circleci.com/docs/environment#java)
   2. Create a *dependencies* element with a *pre* sub-element
   3. Add the `rsync` command to execute the overlay.
   
@@ -72,7 +75,7 @@ SDK/JRE provided by CircleCI by default.  That's it!  There's nothing to it!
 ```
 machine:
   java:
-    version: openjdk8
+    version: oraclejdk8
 
 dependencies:
   pre:

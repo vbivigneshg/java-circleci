@@ -2,7 +2,7 @@
 
 ## Build Status
 
-[![Circle CI](https://circleci.com/gh/revof11/java-circleci/tree/develop.svg?style=svg)](https://circleci.com/gh/revof11/java-circleci/tree/develop)
+[![Circle CI](https://circleci.com/gh/revof11/java-circleci/tree/master.svg?style=svg)](https://circleci.com/gh/revof11/java-circleci/tree/master)
 
 ## About
 

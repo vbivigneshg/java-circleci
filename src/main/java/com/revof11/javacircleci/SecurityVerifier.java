@@ -18,7 +18,7 @@ public class SecurityVerifier {
   /**
    * The name of the class that we use to verify Bouncy Castle existence.
    */
-  public static final String BOUNCY_CASTLE_CLASS = "org.bouncycastle.LICENSE";
+  public static final String BOUNCY_CASTLE_CLASS = "org.bouncycastle.jce.provider.BouncyCastleProvider";
 
   /**
    * The algorithm to use to check for installation fo the Java Cryptography

@@ -1,3 +1,22 @@
+machine:
+  timezone:
+    America/New_York
+
+  java:
+    version: oraclejdk8
+
+  services:
+    - postgresql
+
+  environment:
+    DS_URL: jdbc:postgresql://ubuntu:@127.0.0.1:5432/circle_test
+
 dependencies:
   override:
-    - mvn -DskipTests clean install dependency:resolve-plugins dependency:go-offline
+    - mvn install -DskipTests
+
+general:
+  branches:
+    only:
+      - master
+      - develop

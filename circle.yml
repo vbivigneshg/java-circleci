@@ -14,7 +14,10 @@ general:
     only:
       - master
       - develop
-
+      
+override:
+  - clean install
+  
 test:
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/

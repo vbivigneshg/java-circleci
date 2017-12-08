@@ -4,6 +4,7 @@ machine:
 general:
     artifacts:
         - "target/java-demo.war"
-test:
-    post:
-        - mvn clean install
+        
+- run: mvn dependency:go-offline
+- run: mvn package
+- run: mvn clean install

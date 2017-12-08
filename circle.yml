@@ -1,22 +1,9 @@
 machine:
-  timezone:
-    America/New_York
-
-  java:
-    version: oraclejdk8
-
-  services:
-    - postgresql
-
-  environment:
-    DS_URL: jdbc:postgresql://ubuntu:@127.0.0.1:5432/circle_test
-
-dependencies:
-  override:
-    - mvn install -DskipTests
-
+    java:
+        version: openjdk7
 general:
-  branches:
-    only:
-      - master
-      - develop
+    artifacts:
+        - "target/java-demo.war"
+test:
+    post:
+        - mvn clean install
